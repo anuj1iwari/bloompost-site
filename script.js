@@ -1,30 +1,30 @@
 // --- MOCK DATA ---
 const FLOWERS_DATA = {
     color: [
-        { id: 'flower1', name: 'Pink Beauty', url: 'https://i.ibb.co/jkwSsk3n/flow11.webp', quote: "Bloom with grace and kindness." },
-        { id: 'flower2', name: 'Sunny Delight', url: 'https://i.ibb.co/dsXdTCs4/flow22.webp', quote: "Radiate warmth and happiness." },
-        { id: 'flower3', name: 'Gentle Love', url: 'https://i.ibb.co/tPqv4HPv/flow33.webp', quote: "A symbol of love and fascination." },
-        { id: 'flower4', name: 'Ocean Whisper', url: 'https://i.ibb.co/ksZ4hWy0/flow44.webp', quote: "Express your heartfelt emotions." },
-        { id: 'flower5', name: 'Joyful Bloom', url: 'https://i.ibb.co/8Dy9WSZR/flow55.webp', quote: "Wishing you prosperity and joy." },
-        { id: 'flower6', name: 'Vibrant Spirit', url: 'https://i.ibb.co/d0YgTwck/flow66.webp', quote: "Find your inner strength and shine." },
-        { id: 'flower7', name: 'Deepest Passion', url: 'https://i.ibb.co/1fVqBVFv/flow77.webp', quote: "A timeless message of the heart." },
-        { id: 'flower8', name: 'Golden Hope', url: 'https://i.ibb.co/1tPk9CvD/flow88.webp', quote: "Turn towards the light and grow." },
+        { id: 'flower1', name: 'Pink Beauty', url: 'images/flow11.webp', quote: "Bloom with grace and kindness." },
+        { id: 'flower2', name: 'Sunny Delight', url: 'images/flow22.webp', quote: "Radiate warmth and happiness." },
+        { id: 'flower3', name: 'Gentle Love', url: 'images/flow33.webp', quote: "A symbol of love and fascination." },
+        { id: 'flower4', name: 'Ocean Whisper', url: 'images/flow44.webp', quote: "Express your heartfelt emotions." },
+        { id: 'flower5', name: 'Joyful Bloom', url: 'images/flow55.webp', quote: "Wishing you prosperity and joy." },
+        { id: 'flower6', name: 'Vibrant Spirit', url: 'images/flow66.webp', quote: "Find your inner strength and shine." },
+        { id: 'flower7', name: 'Deepest Passion', url: 'images/flow77.webp', quote: "A timeless message of the heart." },
+        { id: 'flower8', name: 'Golden Hope', url: 'images/flow88.webp', quote: "Turn towards the light and grow." },
     ],
     bw: [
-        { id: 'flower1', name: 'Classic Form', url: 'https://i.ibb.co/jkwSsk3n/flow11.webp', quote: "Simplicity is the ultimate sophistication." },
-        { id: 'flower2', name: 'Light & Shadow', url: 'https://i.ibb.co/dsXdTCs4/flow22.webp', quote: "In black and white, the soul is revealed." },
-        { id: 'flower3', name: 'Elegant Shape', url: 'https://i.ibb.co/tPqv4HPv/flow33.webp', quote: "Elegance is about being remembered." },
-        { id: 'flower4', name: 'Pure Beauty', url: 'https://i.ibb.co/ksZ4hWy0/flow44.webp', quote: "Beauty in its purest form." },
-        { id: 'flower5', name: 'Timeless Gesture', url: 'https://i.ibb.co/8Dy9WSZR/flow55.webp', quote: "A classic gesture that never fades." },
-        { id: 'flower6', name: 'Bold Lines', url: 'https://i.ibb.co/d0YgTwck/flow66.webp', quote: "Let light and shadow tell the story." },
-        { id: 'flower7', name: 'Poetic Form', url: 'https://i.ibb.co/1fVqBVFv/flow77.webp', quote: "Timeless beauty, endless emotion." },
-        { id: 'flower8', name: 'Simple Joy', url: 'https://i.ibb.co/1tPk9CvD/flow88.webp', quote: "Find joy in the simple things." },
+        { id: 'flower1', name: 'Classic Form', url: 'images/flow11.webp', quote: "Simplicity is the ultimate sophistication." },
+        { id: 'flower2', name: 'Light & Shadow', url: 'images/flow22.webp', quote: "In black and white, the soul is revealed." },
+        { id: 'flower3', name: 'Elegant Shape', url: 'images/flow33.webp', quote: "Elegance is about being remembered." },
+        { id: 'flower4', name: 'Pure Beauty', url: 'images/flow44.webp', quote: "Beauty in its purest form." },
+        { id: 'flower5', name: 'Timeless Gesture', url: 'images/flow55.webp', quote: "A classic gesture that never fades." },
+        { id: 'flower6', name: 'Bold Lines', url: 'images/flow66.webp', quote: "Let light and shadow tell the story." },
+        { id: 'flower7', name: 'Poetic Form', url: 'images/flow77.webp', quote: "Timeless beauty, endless emotion." },
+        { id: 'flower8', name: 'Simple Joy', url: 'images/flow88.webp', quote: "Find joy in the simple things." },
     ]
 };
 const WRAPPER_DATA = [
-    { id: 'wrapper1', name: 'Natural', url: 'https://i.ibb.co/6c4Xjp5y/flow-23.jpg' },
-    { id: 'wrapper2', name: 'Elegant', url: 'https://i.ibb.co/fVJ4bwRS/flow24.jpg' },
-    { id: 'wrapper3', name: 'Artistic', url: 'https://i.ibb.co/k640t6X6/flow28.png' }
+    { id: 'wrapper1', name: 'Natural', url: 'images/flow-23.jpg' },
+    { id: 'wrapper2', name: 'Elegant', url: 'images/flow24.jpg' },
+    { id: 'wrapper3', name: 'Artistic', url: 'images/flow28.png' }
 ];
 
 // --- GLOBAL STATE ---
@@ -248,7 +248,6 @@ messageForm.addEventListener('submit', async function(e) {
 async function downloadBouquet() {
     const { recipientName, senderName, message, arrangement, wrapper } = appState.bouquetData;
     
-    // Populate the hidden capture area
     document.getElementById('capture-recipient-name').textContent = `Dear ${recipientName},`;
     document.getElementById('capture-message-text').textContent = message;
     document.getElementById('capture-sender-name').textContent = senderName;
@@ -258,48 +257,28 @@ async function downloadBouquet() {
     
     const wrapperImg = document.createElement('img');
     wrapperImg.src = wrapper.url;
-    wrapperImg.crossOrigin = 'anonymous'; // **FIX 1: Allow cross-origin images**
     wrapperImg.className = 'absolute inset-0 w-full h-full object-cover';
     preview.appendChild(wrapperImg);
     
-    let imageLoadPromises = [];
-
-    const wrapperPromise = new Promise(resolve => {
-        wrapperImg.onload = resolve;
-        wrapperImg.onerror = resolve; // Continue even if an image fails
-    });
-    imageLoadPromises.push(wrapperPromise);
-
     arrangement.forEach((flowerData) => {
         const img = document.createElement('img');
         img.src = flowerData.url;
-        img.crossOrigin = 'anonymous'; // **FIX 1: Allow cross-origin images**
         img.className = 'absolute';
-        img.style.width = `${(flowerData.size / 100) * 600}px`; // Convert % to px
+        img.style.width = `${(flowerData.size / 100) * 600}px`; 
         img.style.height = 'auto';
         img.style.left = `${(flowerData.x / 100) * 600}px`;
         img.style.top = `${(flowerData.y / 100) * 600}px`;
         img.style.transform = `translate(-50%, -50%) rotate(${flowerData.rotation}deg)`;
         preview.appendChild(img);
-        const p = new Promise(resolve => {
-            img.onload = resolve;
-            img.onerror = resolve; // Continue even if an image fails
-        });
-        imageLoadPromises.push(p);
     });
 
-    // **FIX 2: Wait for all images to fully load**
-    await Promise.all(imageLoadPromises);
-    
-    // A small extra delay just in case
-    await new Promise(resolve => setTimeout(resolve, 500));
+    // Wait for local images to render, 500ms should be enough
+    await new Promise(resolve => setTimeout(resolve, 500)); 
 
     const captureArea = document.getElementById('capture-area');
     try {
         const canvas = await html2canvas(captureArea, {
             backgroundColor: 'var(--bg-cream)',
-            useCORS: true, // Tell html2canvas to handle CORS
-            allowTaint: true,
             scale: 2 // Higher resolution
         });
 
