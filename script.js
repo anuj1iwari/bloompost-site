@@ -258,7 +258,7 @@ async function downloadBouquet() {
     
     const wrapperImg = document.createElement('img');
     wrapperImg.src = wrapper.url;
-    wrapperImg.crossOrigin = 'anonymous'; // Important for external images
+    wrapperImg.crossOrigin = 'anonymous'; // **FIX 1: Allow cross-origin images**
     wrapperImg.className = 'absolute inset-0 w-full h-full object-cover';
     preview.appendChild(wrapperImg);
     
@@ -273,7 +273,7 @@ async function downloadBouquet() {
     arrangement.forEach((flowerData) => {
         const img = document.createElement('img');
         img.src = flowerData.url;
-        img.crossOrigin = 'anonymous'; // Important for external images
+        img.crossOrigin = 'anonymous'; // **FIX 1: Allow cross-origin images**
         img.className = 'absolute';
         img.style.width = `${(flowerData.size / 100) * 600}px`; // Convert % to px
         img.style.height = 'auto';
@@ -288,17 +288,17 @@ async function downloadBouquet() {
         imageLoadPromises.push(p);
     });
 
-    // Wait for all images to load before capturing
+    // **FIX 2: Wait for all images to fully load**
     await Promise.all(imageLoadPromises);
     
-    // A small delay to ensure images are fully rendered
+    // A small extra delay just in case
     await new Promise(resolve => setTimeout(resolve, 500));
 
     const captureArea = document.getElementById('capture-area');
     try {
         const canvas = await html2canvas(captureArea, {
             backgroundColor: 'var(--bg-cream)',
-            useCORS: true,
+            useCORS: true, // Tell html2canvas to handle CORS
             allowTaint: true,
             scale: 2 // Higher resolution
         });
