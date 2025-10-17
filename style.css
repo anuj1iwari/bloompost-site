@@ -1,0 +1,94 @@
+/* New Color Palette and Fonts */
+:root {
+    --bg-cream: #FDFBF6;
+    --text-dark: #3D405B;
+    --primary-accent: #E07A5F;
+    --soft-green: #81B29A;
+    --light-gray: #F4F1DE;
+}
+body { 
+    background-color: var(--bg-cream); 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+}
+/* Special font for headings and names */
+.font-cursive { 
+    font-family: 'Dancing Script', cursive; 
+}
+.hidden { display: none; }
+
+/* Subtle Animations */
+.fade-in { animation: fadeIn 0.6s ease-in-out forwards; }
+.fade-in-delay { animation: fadeIn 1s ease-in-out 1.5s forwards; opacity: 0; }
+.flower-animate { animation: floatIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; opacity: 0; }
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(15px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+@keyframes floatIn { 
+    to { opacity: 1; } 
+}
+
+/* Custom Button Styles */
+.btn {
+    padding: 0.75rem 2rem;
+    border-radius: 50px; /* Fully rounded */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.btn-primary {
+    background-color: var(--text-dark);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--primary-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.1);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+}
+.btn-secondary:hover {
+    background-color: var(--text-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.1);
+}
+
+/* B&W Mode */
+.grayscale-mode img {
+    filter: grayscale(100%);
+}
+
+/* Spinner */
+.spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--primary-accent);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.wrapper-option.selected {
+    border-color: var(--primary-accent);
+    transform: scale(1.05);
+}
+/* Image placeholder */
+.img-placeholder {
+    background-color: #f0ebe5;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse {
+    50% { opacity: .5; }
+}
+
