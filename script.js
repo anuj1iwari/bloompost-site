@@ -1,33 +1,31 @@
-// --- MOCK DATA ---
 const FLOWERS_DATA = {
     color: [
-        { id: 'flower1', name: 'Pink Beauty', url: 'images/flow11.webp', quote: "Bloom with grace and kindness." },
-        { id: 'flower2', name: 'Sunny Delight', url: 'images/flow22.webp', quote: "Radiate warmth and happiness." },
-        { id: 'flower3', name: 'Gentle Love', url: 'images/flow33.webp', quote: "A symbol of love and fascination." },
-        { id: 'flower4', name: 'Ocean Whisper', url: 'images/flow44.webp', quote: "Express your heartfelt emotions." },
-        { id: 'flower5', name: 'Joyful Bloom', url: 'images/flow55.webp', quote: "Wishing you prosperity and joy." },
-        { id: 'flower6', name: 'Vibrant Spirit', url: 'images/flow66.webp', quote: "Find your inner strength and shine." },
-        { id: 'flower7', name: 'Deepest Passion', url: 'images/flow77.webp', quote: "A timeless message of the heart." },
-        { id: 'flower8', name: 'Golden Hope', url: 'images/flow88.webp', quote: "Turn towards the light and grow." },
+        { id: 'flower1', name: 'Pink Beauty', url: 'https://i.ibb.co/jkwSsk3n/flow11.webp', quote: "Bloom with grace and kindness." },
+        { id: 'flower2', name: 'Sunny Delight', url: 'https://i.ibb.co/dsXdTCs4/flow22.webp', quote: "Radiate warmth and happiness." },
+        { id: 'flower3', name: 'Gentle Love', url: 'https://i.ibb.co/tPqv4HPv/flow33.webp', quote: "A symbol of love and fascination." },
+        { id: 'flower4', name: 'Ocean Whisper', url: 'https://i.ibb.co/ksZ4hWy0/flow44.webp', quote: "Express your heartfelt emotions." },
+        { id: 'flower5', name: 'Joyful Bloom', url: 'https://i.ibb.co/8Dy9WSZR/flow55.webp', quote: "Wishing you prosperity and joy." },
+        { id: 'flower6', name: 'Vibrant Spirit', url: 'https://i.ibb.co/d0YgTwck/flow66.webp', quote: "Find your inner strength and shine." },
+        { id: 'flower7', name: 'Deepest Passion', url: 'https://i.ibb.co/1fVqBVFv/flow77.webp', quote: "A timeless message of the heart." },
+        { id: 'flower8', name: 'Golden Hope', url: 'https://i.ibb.co/1tPk9CvD/flow88.webp', quote: "Turn towards the light and grow." },
     ],
     bw: [
-        { id: 'flower1', name: 'Classic Form', url: 'images/flow11.webp', quote: "Simplicity is the ultimate sophistication." },
-        { id: 'flower2', name: 'Light & Shadow', url: 'images/flow22.webp', quote: "In black and white, the soul is revealed." },
-        { id: 'flower3', name: 'Elegant Shape', url: 'images/flow33.webp', quote: "Elegance is about being remembered." },
-        { id: 'flower4', name: 'Pure Beauty', url: 'images/flow44.webp', quote: "Beauty in its purest form." },
-        { id: 'flower5', name: 'Timeless Gesture', url: 'images/flow55.webp', quote: "A classic gesture that never fades." },
-        { id: 'flower6', name: 'Bold Lines', url: 'images/flow66.webp', quote: "Let light and shadow tell the story." },
-        { id: 'flower7', name: 'Poetic Form', url: 'images/flow77.webp', quote: "Timeless beauty, endless emotion." },
-        { id: 'flower8', name: 'Simple Joy', url: 'images/flow88.webp', quote: "Find joy in the simple things." },
+        { id: 'flower1', name: 'Classic Form', url: 'https://i.ibb.co/jkwSsk3n/flow11.webp', quote: "Simplicity is the ultimate sophistication." },
+        { id: 'flower2', name: 'Light & Shadow', url: 'https://i.ibb.co/dsXdTCs4/flow22.webp', quote: "In black and white, the soul is revealed." },
+        { id: 'flower3', name: 'Elegant Shape', url: 'https://i.ibb.co/tPqv4HPv/flow33.webp', quote: "Elegance is about being remembered." },
+        { id: 'flower4', name: 'Pure Beauty', url: 'https://i.ibb.co/ksZ4hWy0/flow44.webp', quote: "Beauty in its purest form." },
+        { id: 'flower5', name: 'Timeless Gesture', url: 'https://i.ibb.co/8Dy9WSZR/flow55.webp', quote: "A classic gesture that never fades." },
+        { id: 'flower6', name: 'Bold Lines', url: 'https://i.ibb.co/d0YgTwck/flow66.webp', quote: "Let light and shadow tell the story." },
+        { id: 'flower7', name: 'Poetic Form', url: 'https://i.ibb.co/1fVqBVFv/flow77.webp', quote: "Timeless beauty, endless emotion." },
+        { id: 'flower8', name: 'Simple Joy', url: 'https://i.ibb.co/1tPk9CvD/flow88.webp', quote: "Find joy in the simple things." },
     ]
 };
 const WRAPPER_DATA = [
-    { id: 'wrapper1', name: 'Natural', url: 'images/flow-23.jpg' },
-    { id: 'wrapper2', name: 'Elegant', url: 'images/flow24.jpg' },
-    { id: 'wrapper3', name: 'Artistic', url: 'images/flow28.png' }
+    { id: 'wrapper1', name: 'Natural', url: 'https://i.ibb.co/6c4Xjp5y/flow-23.jpg' },
+    { id: 'wrapper2', name: 'Elegant', url: 'https://i.ibb.co/fVJ4bwRS/flow24.jpg' },
+    { id: 'wrapper3', name: 'Artistic', url: 'https://i.ibb.co/k640t6X6/flow28.png' }
 ];
 
-// --- GLOBAL STATE ---
 let appState = {
     currentPage: 'landing',
     bouquetMode: 'color',
@@ -37,8 +35,7 @@ let appState = {
     bouquetData: {}
 };
 
-// --- DOM ELEMENTS ---
-const pages = { landing: document.getElementById('page-landing'), build: document.getElementById('page-build'), garden: document.getElementById('page-garden') };
+const pages = { landing: document.getElementById('page-landing'), build: document.getElementById('page-build'), share: document.getElementById('page-share'), garden: document.getElementById('page-garden') };
 const buildSteps = { select: document.getElementById('step-select'), arrangement: document.getElementById('step-arrangement'), message: document.getElementById('step-message') };
 const flowerGrid = document.getElementById('flower-grid');
 const counter = document.getElementById('selection-counter');
@@ -47,8 +44,9 @@ const messageForm = document.getElementById('message-form');
 const submitButton = document.getElementById('submit-button');
 const submitText = document.getElementById('submit-text');
 const submitSpinner = document.getElementById('submit-spinner');
+const shareLinkInput = document.getElementById('share-link-input');
+const copyButton = document.getElementById('copy-button');
 
-// --- FUNCTIONS ---
 function navigate(page) {
     Object.values(pages).forEach(p => { if (p.id !== 'page-garden') p.classList.add('hidden')});
     if (pages[page]) pages[page].classList.remove('hidden');
@@ -151,7 +149,7 @@ function goToArrangementStep(fromMessage = false) {
 
 function generateAndRenderArrangement() {
     appState.flowerArrangements = [];
-    const canvasSize = 400; // Reference size
+    const canvasSize = 400;
     const centerX = canvasSize / 2;
     const centerY = canvasSize / 1.8;
     const clusterRadius = canvasSize / 5;
@@ -159,14 +157,13 @@ function generateAndRenderArrangement() {
     appState.selectedFlowers.forEach((flower, index) => {
         const angle = (index / appState.selectedFlowers.length) * 2 * Math.PI + (Math.random() - 0.5);
         const radius = clusterRadius * (0.5 + Math.random() * 0.5);
-        
         const x = centerX + radius * Math.cos(angle);
         const y = centerY + radius * Math.sin(angle);
         const rotation = Math.random() * 50 - 25;
         
         appState.flowerArrangements.push({
             ...flower,
-            x: (x / canvasSize) * 100, // as percentage
+            x: (x / canvasSize) * 100,
             y: (y / canvasSize) * 100,
             size: 25 + Math.random() * 10,
             rotation,
@@ -223,73 +220,70 @@ function goToMessageStep() {
     });
 }
 
-messageForm.addEventListener('submit', async function(e) {
+messageForm.addEventListener('submit', function(e) {
     e.preventDefault();
     submitText.textContent = 'Preparing...';
     submitSpinner.classList.remove('hidden');
     submitButton.disabled = true;
 
-    const formData = new FormData(this);
-    appState.bouquetData = {
-        recipientName: formData.get('recipientName'),
-        senderName: formData.get('senderName'),
-        message: formData.get('message'),
-        arrangement: appState.flowerArrangements,
-        wrapper: appState.selectedWrapper
-    };
-    
-    await downloadBouquet(); // Await the download
+    setTimeout(() => {
+        const formData = new FormData(this);
+        appState.bouquetData = {
+            recipientName: formData.get('recipientName'),
+            senderName: formData.get('senderName'),
+            message: formData.get('message'),
+            arrangement: appState.flowerArrangements,
+            wrapper: appState.selectedWrapper
+        };
+        renderSharePage();
+        navigate('share');
 
-    submitText.textContent = 'Create & Download';
-    submitSpinner.classList.add('hidden');
-    submitButton.disabled = false;
+        submitText.textContent = 'Create & Share';
+        submitSpinner.classList.add('hidden');
+        submitButton.disabled = false;
+    }, 1000);
 });
 
-async function downloadBouquet() {
+function renderSharePage() {
     const { recipientName, senderName, message, arrangement, wrapper } = appState.bouquetData;
     
-    document.getElementById('capture-recipient-name').textContent = `Dear ${recipientName},`;
-    document.getElementById('capture-message-text').textContent = message;
-    document.getElementById('capture-sender-name').textContent = senderName;
+    document.getElementById('share-recipient-name').textContent = `Dear ${recipientName},`;
+    document.getElementById('share-message-text').textContent = message;
+    document.getElementById('share-sender-name').textContent = senderName;
 
-    const preview = document.getElementById('capture-bouquet-display');
+    const preview = document.getElementById('share-bouquet-display');
     preview.innerHTML = '';
     
     const wrapperImg = document.createElement('img');
     wrapperImg.src = wrapper.url;
-    wrapperImg.className = 'absolute inset-0 w-full h-full object-cover';
+    wrapperImg.className = 'absolute inset-0 w-full h-full object-cover flower-animate';
     preview.appendChild(wrapperImg);
     
-    arrangement.forEach((flowerData) => {
+    arrangement.forEach((flowerData, index) => {
         const img = document.createElement('img');
         img.src = flowerData.url;
-        img.className = 'absolute';
-        img.style.width = `${(flowerData.size / 100) * 600}px`; 
+        img.className = 'absolute flower-animate';
+        img.style.width = `${flowerData.size}%`;
         img.style.height = 'auto';
-        img.style.left = `${(flowerData.x / 100) * 600}px`;
-        img.style.top = `${(flowerData.y / 100) * 600}px`;
+        img.style.left = `${flowerData.x}%`;
+        img.style.top = `${flowerData.y}%`;
         img.style.transform = `translate(-50%, -50%) rotate(${flowerData.rotation}deg)`;
+        img.style.animationDelay = `${(index + 1) * 0.15}s`;
         preview.appendChild(img);
     });
 
-    // Wait for local images to render, 500ms should be enough
-    await new Promise(resolve => setTimeout(resolve, 500)); 
+    const slug = Math.random().toString(36).substring(2, 8);
+    // Use the actual location href for a working link in the context of the single page app
+    shareLinkInput.value = `${window.location.href.split('#')[0]}#${slug}`;
+}
 
-    const captureArea = document.getElementById('capture-area');
-    try {
-        const canvas = await html2canvas(captureArea, {
-            backgroundColor: 'var(--bg-cream)',
-            scale: 2 // Higher resolution
-        });
-
-        const link = document.createElement('a');
-        link.download = `bloompost-for-${recipientName}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-    } catch(e) {
-        console.error("Error capturing canvas:", e);
-        alert("Sorry, there was an error downloading the image. Please try again.");
-    }
+function copyLink() {
+    shareLinkInput.select();
+    document.execCommand('copy');
+    copyButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+    setTimeout(() => {
+         copyButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+    }, 2000);
 }
 
 function resetApp() {
